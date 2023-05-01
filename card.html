@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Onboarding</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .header {
+                position:-webkit-sticky;
+                position: sticky;
+                display: block;
+                top: 0;
+                padding: 0px;
+            }
+            .header h1 {
+                background-color:#2e97ed;
+                padding: 20px;
+                text-align: center;
+                margin: 0;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            body {
+                background-image: url('latar2.jpg');
+                background-repeat: x-repeat;
+                background-size: cover;
+                margin: 0px;
+                padding: 0px;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                margin: 10px;
+                align-items: center;
+                grid-gap: 40px;
+                padding: 60px;
+                justify-items: center;  
+            }
+            img {
+                object-fit: cover;
+                height: auto;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                cursor: pointer;
+            }
+            
+            .grid > article {
+                box-shadow: 10px 5px 5px 0px grey;
+                text-align: center;
+                background: #fff;
+                width: 300px;
+                transition: transform;
+                border-radius: 20px;
+            }
+            .konten {
+                cursor:pointer;
+                height: auto;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                margin-top: 30px;
+            }
+            .konten a {
+                display: block;
+                padding: 10px;
+                text-align: center;
+                color: #fff;
+                background-color: #2196f3;
+                text-decoration: none;
+                border-radius: 20px;
+                transition: background-color 0.3s ease-in-out;
+            }
+            .container {
+                justify-content: center;
+            }
+            .grid > article:hover {
+                transform: rotate(5deg);
+            }
+            @media (min-width:1000px){
+                .grid > konten:hover {
+                    margin: 0px;
+                    padding: 0px;
+                    margin-top: 0px;
+                    text-align: center;
+                    line-height: 100px;
+                    font-size: 30px;
+                }
+            }
+            @media (max-width:1000px){
+                .grid {
+                    background-color: lightblue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+            }
+
+        </style>
+    </head>
+<body>
+    <div class="header"><h1>Anime Karya Makoto Shinkai</h1></div>
+    <div class= "container">
+        <main class= "grid">
+            <article>
+                <img src= "Your-Name-Kimi-no-nawa.png" alt="gambar anime" width="300px" height="100px">
+                <div class= "konten">
+                    <h2>Your Name Kimi No Nawa</h2>
+                    <p> 
+                        Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy
+                        in the bustling city of Tokyo a dream that stands in stark contrast to
+                        her present life in the countryside. Meanwhile in the city, Taki
+                        Tachibana lives a busy life as a high school student while juggling his
+                        part-time job and hopes for a future in architecture
+                    </p>
+                    <a href="#">Watch Now</a>
+                </div>
+            </article>
+            <article>
+                <img src= "anime_suzume.jpg" alt="gambar anime suzume" width="300px" height="100px">
+                <div class= "konten">
+                    <h2>Suzume</h2>
+                    <p> 
+                        Suzume lives in a small, quiet town in the Kyushu area.One day, Suzume met a 
+                        young man who was going around looking for the door.Then Suzume followed the 
+                        youth and found a door in the mountain ruins.When opened, the doors lead them 
+                        to various areas throughout Japan. But unfortunately, there is one door that 
+                        opens and brings disaster for them. How will the story continue?
+                    </p>
+                    <a href="#">Watch Now</a>
+                </div>
+            </article>
+            <article>
+                <img src= "anime_garden.png" alt="gambar anime garden" width="300px" height="100px">
+                <div class= "konten">
+                    <h2>Kotonoha No Niwa</h2>
+                    <p> 
+                        Kotoha no Niwa (The Garden of Words) is a romantic anime about Takao, 
+                        a high school student who dreams of becoming a shoemaker, and Yukari, 
+                        an adult woman who often goes to a park in Tokyo. They meet in the park 
+                        and start developing a close relationship. However, fate makes it difficult 
+                        for their relationship to be sustained.
+                    </p>
+                    <a href="#">Watch Now</a>
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
