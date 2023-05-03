@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function hitungBurger(jmlRoti, jmlDaging, jmlKeju) {
+            let sisaRoti = jmlRoti ;
+            let sisaDaging = jmlDaging ;
+            let sisaKeju = jmlKeju ;
+
+            let burgerSpesial = 0;
+            let burgerDaging = 0;
+            let burgerBiasa = 0;
+
+            if (jmlRoti < 2 || jmlDaging < 1) {
+                console.log(`Jumlah Roti: ${jmlRoti}`);
+                console.log(`Jumlah Daging: ${jmlDaging}`);
+                console.log(`Jumlah Keju: ${jmlKeju}`);
+                console.log(`Tidak ada BURGER yang dapat dibuat!`);
+                console.log(`Sisa Roti = ${jmlRoti} buah, Daging ${jmlDaging} lembar, keju = ${jmlKeju} lembar`);
+            } else {
+            if (jmlRoti >= 4 && jmlDaging >= 2 && jmlKeju >= 1) {
+                burgerSpesial = Math.floor(Math.min(jmlRoti / 2, jmlDaging, jmlKeju));
+                jmlRoti -= burgerSpesial * 2;
+                jmlDaging -= burgerSpesial;
+                jmlKeju -= burgerSpesial;
+                }
+            if (jmlRoti >= 2 && jmlDaging >= 2) {
+                burgerDaging = Math.floor(Math.min(jmlRoti / 2, jmlDaging / 2));
+                jmlRoti -= burgerDaging * 2;
+                jmlDaging -= burgerDaging * 2;
+                }
+            if (jmlRoti >= 2 && jmlDaging >= 1) {
+                burgerBiasa = Math.floor(jmlRoti / 2);
+                jmlRoti -= burgerBiasa * 2;
+                jmlDaging -= burgerBiasa;
+                }
+                    
+                console.log(`Jumlah Roti: ${jmlRoti + sisaRoti}`);
+                console.log(`Jumlah Daging: ${jmlDaging + sisaDaging}`);
+                console.log(`Jumlah Keju: ${jmlKeju + sisaKeju}`);
+                console.log(`Burger yang dapat dihasilkan yaitu: ${burgerSpesial} BURGER SPESIAL, ${burgerDaging} BURGER DAGING, ${burgerBiasa} BURGER BIASA`);
+                console.log(`Sisa Roti = ${jmlRoti + sisaRoti} buah, Daging ${jmlDaging + sisaDaging} lembar, keju = ${jmlKeju + sisaKeju} lembar`);
+                }
+            }
+
+            hitungBurger(6, 4, 2);
+            hitungBurger(1, 1, 2);
+
+        </script>
+    </body>
+</html>
+
